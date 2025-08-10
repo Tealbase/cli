@@ -1,0 +1,22 @@
+{
+    "version": "{{ .Version }}",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/tealbase/cli/releases/download/v{{ .Version }}/tealbase_windows_amd64.tar.gz",
+            "bin": [
+                "tealbase.exe"
+            ],
+            "hash": "{{ .Checksum.tealbase_windows_amd64 }}"
+        },
+        "arm64": {
+            "url": "https://github.com/tealbase/cli/releases/download/v{{ .Version }}/tealbase_windows_arm64.tar.gz",
+            "bin": [
+                "tealbase.exe"
+            ],
+            "hash": "{{ .Checksum.tealbase_windows_arm64 }}"
+        }
+    },
+    "homepage": "https://tealbase.com",
+    "license": "MIT",
+    "description": "{{ .Description }}"
+}
